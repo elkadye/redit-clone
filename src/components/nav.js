@@ -38,7 +38,7 @@ const NavBar = () => {
           }}>
           <p> head gut left </p>
         </Grid>
-        <Grid item xs={12} md={12} lg={10} mx={2}>
+        <Grid item xs={12} md={10} xl={11}>
           <Grid container spacing={2}>
             <Grid item xs={2} md={1}>
               <RedditIcon color="secondary" fontSize="large" />
@@ -53,8 +53,8 @@ const NavBar = () => {
                 />
               </form>
             </Grid>
-            <Grid item xs={4} md={3}>
-              <Grid container >
+            <Grid item xs={4} md={4}>
+              <Grid container justifyContent="center">
                 <Stack direction="row" spacing={1}>
                   <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
                   <Button variant="contained" color="secondary">
@@ -65,7 +65,7 @@ const NavBar = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid
+        {/* <Grid
           item
           xs={0}
           md={2}
@@ -75,11 +75,11 @@ const NavBar = () => {
               sm: 'none',
               md: 'none',
               lg: 'none',
-              xl: 'block',
+              xl: 'none',
             },
           }}>
           <p> head gut right </p>
-        </Grid>
+        </Grid> */}
       </Grid>
     </>
   );

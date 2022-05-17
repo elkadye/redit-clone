@@ -69,10 +69,10 @@ console.log(postId)
   });
   return (
     <>
-        <Box sx={{ style }}>
+        <Box >
         <form onSubmit={formik.handleSubmit}>
           <FormControl>
-            <InputLabel>Comment</InputLabel>
+            
             <TextField
               error={Boolean(formik.errors.body) && formik.touched.body}
               helperText={formik.errors.body}
@@ -83,6 +83,7 @@ console.log(postId)
               name="body"
               id="body"
               fullWidth
+              lable="comment"
             />
           </FormControl>
           <Button type="submit" >
