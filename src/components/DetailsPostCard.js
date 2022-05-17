@@ -30,6 +30,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 // import EditModal from './editModal';
 import Comment from './commentCard';
 import Add from './addComment';
+import moment from 'moment';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -72,7 +73,9 @@ export default function PostCard({ post }) {
           </Avatar>
         }
         title={post.userId}
-        subheader={post.updatedAt}
+        subheader={moment(post.updatedAt).format(
+          'dddd, MMMM Do YYYY, h:mm a',
+        )}
       />
       <CardMedia
         component="img"

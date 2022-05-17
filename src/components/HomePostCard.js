@@ -29,6 +29,7 @@ import { addVote } from '../actions/posts.actions';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 // import EditModal from './editModal';
 import Comment from './commentCard';
+import moment from "moment";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -73,9 +74,8 @@ export default function PostCard({post}) {
             {post.id}
           </Avatar>
         }
-       
         title={post.userId}
-        subheader={post.updatedAt}
+        subheader={moment(post.updatedAt).format('dddd, MMMM Do YYYY, h:mm a')}
       />
 
       <CardContent>
